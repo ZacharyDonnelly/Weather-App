@@ -1,0 +1,28 @@
+body {
+  margin: auto;
+  background: teal;
+}
+
+#container {
+  display: relative;
+  margin: auto;
+  text-align: center;
+}
+
+#temp {
+  display: relative;
+  margin: auto;
+  margin-top: 20px;
+  border: 2px solid black;
+  width: 110px;
+  text-align: center;
+}
+
+#text {
+  font-size: 1.2rem;
+}
+
+#location {
+  display: relative;
+  margin: auto;
+}
