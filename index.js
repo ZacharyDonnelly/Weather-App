@@ -1,32 +1,26 @@
-const city = document.querySelector('.info');
-const url = 'https://api.darksky.net/forecast/67c6dfe074cd7f04287259be7fb53417/'
+const apikey =  '9c0dbf0ead41816ebcae0646235f2f79';
+const city = document.querySelector('#input')
+
+
 $('#btn').click(function(){
-    navigator.geolocation.getCurrentPosition(success,error)
-
-    function success(pos) {
-      var lat = pos.coords.latitude;
-      var long = pos.coords.longitude;
-      weather(lat, long);
-  }
-
-  function error() {
-    console.log('There was an error');
-}
-
-    function weather(lat,long){
-      var url = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`; 
-      $.getJSON(url, function(data){
-        updateDOM(data)
-      })    
-      }   
-    
-    function updateDOM(data){
-      const city = data.name;
-      const temp = Math.round(data.main.temp)
-      const icon = data.weather[0].icon
-      
-      $('#text').html(city)
-      $('#city').html(temp + 'C')
-      $('#icon').attr('src', icon)
-  };
+  console.log(city.value)
+$.getJSON({
+  method: "GET",
+  url: `http://api.openweathermap.org/data/2.5/weather?q=${city.value},us&units=imperial&APPID=${apikey}`,
+  dataType: 'JSON'
 })
+.done(updateDOM)
+.fail(function(){
+  alert('UH OH')
+})
+})
+
+ function updateDOM(data){
+   console.log(data)
+   $("#text").text(`${data.main.temp} F`)
+   if(data.main.temp < 50){
+    $(".icon").html('<i class="fas fa-thermometer-empty fa-2x"></i>')
+   }else {
+     $(".icon").html('<i class="fas fa-sun fa-2x"></i>')
+   }
+ }
