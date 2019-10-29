@@ -1,5 +1,5 @@
-const apikey =  '9c0dbf0ead41816ebcae0646235f2f79';
 const city = document.querySelector('#input');
+$.getScript('config.js');
 
 
 $('.btn').click(function(){
