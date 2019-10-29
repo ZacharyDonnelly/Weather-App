@@ -10,23 +10,26 @@
 src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:400&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
 <body>
     <div id='container'>
-              <h1 id='header'>Welcome to my weather app!</h1>
+              <h1 id='header'>Welcome to my weather app</h1>
              <input id='input'type="text" placeholder="Enter your city here">
-             <button id='btn'>Click Me</button>
+             <button type="submit" class="btn btn-primary">Check Weather</button>
          <div id='location'>
           <h1 id='city'></h1
-      </div>
+          </div>
             </div>
             <div id='temp'>
-            <span class='icon'><i class="fas fa-sun fa-2x"></i></span>
-              <h2 id='text'>Temp Here</h2>
+                    <h2 id='text'>Temp Here</h2>  
+            <span class='icon'><i class="fas fa-sun fa-2x" style="color:#fff;"></i></span>             
+              </div>        
+              <div class="humidity">
+                  <h2 id='humid'>Humidity</h2>
+                  <span class="cloud"><i class="fas fa-cloud fa-2x" style="color:#fff"></i></span>
               </div>
-
-        <script src="index.js"></script>
-            </body>
+<script src="index.js"></script>
 </body>
 </html>

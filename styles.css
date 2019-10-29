@@ -1,25 +1,76 @@
 body {
   margin: auto;
-  background: teal;
+  background: url('clouds.jpg');
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1em;
 }
 
+
 #container {
-  display: relative;
-  margin: auto;
+  display: block;
+  margin-left: 225px;
+  width: 70%;
+  background: rgb(11, 108, 138);
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+
+#header {
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  margin-right: 100px;
+  vertical-align: middle;
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+#input {
+  width: 50%;
+  margin-left: 200px;;
 }
 
 #temp {
-  display: relative;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 175px;
   margin-top: 20px;
-  border: 2px solid black;
-  width: 110px;
+  min-width: 150px;
+  width: 150px;
+  height: 85px;
   text-align: center;
 }
 
+.humidity {
+  position: absolute;
+  left: 825px;
+  top: 110px;
+  width: 150px;
+  max-width: 150px;
+  height: 85px;
+  max-height: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 #text {
+  color: #fff;
   font-size: 1.2rem;
+  margin-left: 20px ;
+  font-family: 'Raleway', sans-serif;
+}
+
+#humid {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 20px ;
+  font-family: 'Raleway', sans-serif;
+}
+
+.icon, .cloud{
+  padding-left: 25px;
 }
 
 #location {
